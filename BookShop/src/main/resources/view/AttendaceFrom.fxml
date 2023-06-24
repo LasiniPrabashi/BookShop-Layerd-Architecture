@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="808.0" prefWidth="1093.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.BookShop.Controller.AttendanceFormController">
+   <children>
+      <Pane prefHeight="808.0" prefWidth="1170.0">
+         <children>
+            <Text fill="#3c3d3f" layoutX="98.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Name" text="Employee Attendance" />
+            <ImageView fitHeight="70.0" fitWidth="58.0" layoutX="27.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/icons8-manager-100.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="WHITE" layoutX="364.0" layoutY="40.0" onKeyReleased="#txtsearchKeyReleased" prefHeight="12.0" prefWidth="477.0" promptText="search Id or Name" styleClass="search-field" unFocusColor="WHITE" />
+            <ImageView fitHeight="36.0" fitWidth="27.0" layoutX="797.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/icons8-search-48.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnAdd" layoutX="35.0" layoutY="122.0" onAction="#btnAddOnAction" prefHeight="37.0" prefWidth="141.0" styleClass="button-add" text="ADD ">
+               <graphic>
+                  <GridPane fx:id="addbtnOnAction" prefHeight="30.0" prefWidth="131.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="8.0" prefWidth="49.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="82.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/icons8-collaborator-male-50.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DONE" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <TableView fx:id="tbl" layoutX="32.0" layoutY="307.0" prefHeight="469.0" prefWidth="1106.0" styleClass="tbl" stylesheets="@../style/From.css">
+              <columns>
+                <TableColumn fx:id="tblid" prefWidth="113.0" text="ID" />
+                <TableColumn fx:id="tblfName" prefWidth="247.0" text="Fist Name" />
+                  <TableColumn fx:id="tbllName" prefWidth="266.0" text="Last Name" />
+                  <TableColumn fx:id="tblcity" prefWidth="228.0" text="Date" />
+                  <TableColumn fx:id="tblcontactNumber" prefWidth="251.0" text="Emp_Id" />
+              </columns>
+            </TableView>
+            <Pane fx:id="pane1" layoutX="731.0" layoutY="108.0" prefHeight="102.0" prefWidth="193.0" style="-fx-background-radius: 50;" styleClass="from-box">
+               <children>
+                  <Text fill="#3c3d3f" layoutX="22.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="Name" text="Today " wrappingWidth="76.99999159574509" />
+                  <Text fill="#3c3d3f" layoutX="24.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="Name" text="Employee" wrappingWidth="86.99999159574509" />
+                  <Text fx:id="txtAllEmp" fill="#3c3d3f" layoutX="115.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Name" text="32" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane2" layoutX="938.0" layoutY="108.0" prefHeight="102.0" prefWidth="193.0" style="-fx-background-radius: 50;" styleClass="from-box">
+               <children>
+                  <Text fill="#3c3d3f" layoutX="24.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="Name" text="Today" wrappingWidth="76.99999159574509" />
+                  <Text fill="#3c3d3f" layoutX="24.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="Name" text="Employee Attendace" wrappingWidth="155.9999915957451" />
+                  <Text fx:id="txtEmpAttendanceCount" fill="#3c3d3f" layoutX="115.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Name" text="32" />
+               </children>
+            </Pane>
+            <Text fill="#3c3d3f" layoutX="208.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="Name" text="Name :" wrappingWidth="69.99999159574509" />
+            <Text fx:id="txtName" fill="#3c3d3f" layoutX="311.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="Name" text="Name" wrappingWidth="353.9999915957451" />
+            <JFXComboBox fx:id="cmbEmpIds" layoutX="208.0" layoutY="166.0" onAction="#cmbEmpId" prefHeight="28.0" prefWidth="193.0" promptText="Employee ID" style="-fx-font-size: 18;" styleClass="Name" />
+            <JFXTextField fx:id="txtHoue" alignment="CENTER" layoutX="208.0" layoutY="246.0" prefHeight="26.0" prefWidth="193.0" promptText="Working Houes" style="-fx-font-size: 17;" styleClass="Name" />
+            <JFXButton fx:id="btnAdd1" layoutX="28.0" layoutY="192.0" onAction="#btnReportOnAction" prefHeight="37.0" prefWidth="141.0" styleClass="button-add" text="ADD ">
+               <graphic>
+                  <GridPane fx:id="addbtnOnAction1" prefHeight="30.0" prefWidth="131.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="8.0" prefWidth="49.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="82.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/icons8-add-48.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Report" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../style/dashbord_form.css" />
+      <URL value="@../style/From.css" />
+   </stylesheets>
+</AnchorPane>

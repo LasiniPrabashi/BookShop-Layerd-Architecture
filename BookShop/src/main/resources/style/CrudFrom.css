@@ -1,0 +1,26 @@
+.text-field{
+    -fx-font-size: 16;
+
+}
+
+.don{
+    -fx-text-fill:#ffff ;
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+    -fx-background-color:#189A2E ;
+    -fx-background-radius: 10;
+}
+.button-add:hover{
+    -fx-effect: dropshadow( gaussian ,dimgray,40,0.1,0,0);
+}
+.text-name{
+    -fx-text-fill:#3C3D3F ;
+    -fx-font-weight: bold;
+    -fx-font-size: 15;
+}
+
+.form-box2{
+    -fx-background-color: #fff;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow( gaussian ,dimgray,40,0.1,0,0);
+}

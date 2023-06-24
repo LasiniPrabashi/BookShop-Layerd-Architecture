@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="232.0" prefWidth="1134.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.BookShop.Controller.ItemUpdateFromController">
+   <children>
+      <Pane layoutX="10.0" layoutY="12.0" prefHeight="210.0" prefWidth="1113.0" styleClass="form-box2">
+         <children>
+            <JFXTextField fx:id="txtItemName" alignment="CENTER" layoutX="69.0" layoutY="93.0" prefHeight="26.0" prefWidth="255.0" promptText="Item Name" />
+            <JFXTextField fx:id="txtUnitPrice" alignment="CENTER" layoutX="73.0" layoutY="157.0" prefHeight="26.0" prefWidth="255.0" promptText="UnitPrice" />
+            <Text layoutX="106.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-name" text="Item Detail" />
+            <JFXTextField fx:id="txtMType" alignment="CENTER" layoutX="388.0" layoutY="89.0" prefHeight="30.0" prefWidth="210.0" promptText="Matiriyal Type" />
+            <JFXTextField fx:id="txtDiscription" alignment="CENTER" layoutX="631.0" layoutY="90.0" prefHeight="30.0" prefWidth="177.0" promptText="Discription" />
+            <JFXTextField fx:id="txtQOH" alignment="CENTER" layoutX="867.0" layoutY="89.0" prefHeight="30.0" prefWidth="177.0" promptText="QtyOnHand" />
+            <JFXButton layoutX="924.0" layoutY="149.0" onAction="#btnDonOnAction" prefHeight="37.0" prefWidth="141.0" styleClass="don" text="DON">
+               <graphic>
+                  <GridPane prefHeight="30.0" prefWidth="131.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="8.0" prefWidth="62.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="69.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icon/icons8-add-48.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets left="30.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="DONE" GridPane.columnIndex="1" />
+                     </children>
+                  </GridPane>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="51.0" fitWidth="38.0" layoutX="54.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/icons8-name-tag-90.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtSearchId" alignment="CENTER" layoutX="34.0" layoutY="15.0" onAction="#SearchOnAction" prefHeight="26.0" prefWidth="255.0" promptText="Search ID" style="-fx-border-radius: 50; -fx-border-color: black;" />
+            <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="257.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/icons8-search-48.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="38.0" layoutX="1065.0" layoutY="12.0" onMouseClicked="#closeOnMouseCick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/icons8-macos-close-90.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../style/CrudFrom.css" />
+      <URL value="@../style/From.css" />
+   </stylesheets>
+</AnchorPane>

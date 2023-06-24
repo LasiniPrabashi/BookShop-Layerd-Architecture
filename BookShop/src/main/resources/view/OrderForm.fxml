@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="808.0" prefWidth="1093.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.BookShop.Controller.OrderFormController">
+   <children>
+      <Pane prefHeight="808.0" prefWidth="1170.0">
+         <children>
+            <Text fill="#3c3d3f" layoutX="98.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Name" text="Order" />
+            <ImageView fitHeight="70.0" fitWidth="58.0" layoutX="27.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/icons8-manager-100.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtSearch" alignment="CENTER" focusColor="WHITE" layoutX="364.0" layoutY="40.0" onKeyReleased="#txtsearchKeyReleased" prefHeight="12.0" prefWidth="477.0" promptText="search Id or Name" styleClass="search-field" unFocusColor="WHITE" />
+            <ImageView fitHeight="36.0" fitWidth="27.0" layoutX="797.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icon/icons8-search-48.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="pane" layoutX="13.0" layoutY="75.0" prefHeight="210.0" prefWidth="1141.0">
+               <children>
+                  <JFXButton fx:id="btnUpdate" layoutX="27.0" layoutY="29.0" onAction="#btnNewOderOnAction" prefHeight="37.0" prefWidth="141.0" styleClass="button-update" text="ADD ">
+                     <graphic>
+                        <GridPane prefHeight="30.0" prefWidth="131.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="8.0" prefWidth="49.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="82.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/icons8-add-48.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="New Order" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="btnUpdate1" layoutX="178.0" layoutY="29.0" onAction="#btnNewOderReportOnAction" prefHeight="37.0" prefWidth="169.0" styleClass="button-update" text="ADD ">
+                     <graphic>
+                        <GridPane prefHeight="30.0" prefWidth="131.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="8.0" prefWidth="49.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="82.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="21.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/icon/icons8-add-48.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Report" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                     </graphic>
+                  </JFXButton>
+               </children></Pane>
+            <TableView fx:id="tbl" layoutX="32.0" layoutY="307.0" prefHeight="469.0" prefWidth="1106.0" styleClass="tbl" stylesheets="@../style/From.css">
+              <columns>
+                <TableColumn fx:id="tblid" prefWidth="113.0" text="Order Id" />
+                <TableColumn fx:id="tblCust_id" prefWidth="181.0" text="Cust Id" />
+                  <TableColumn fx:id="tblDate" prefWidth="206.0" text="Date" />
+                  <TableColumn fx:id="tblTime" prefWidth="205.0" text="Time" />
+                  <TableColumn fx:id="tblGrandTotal" prefWidth="220.0" text="Grand total" />
+                  <TableColumn fx:id="tblView" prefWidth="106.0" text="View" />
+              </columns>
+            </TableView>
+            <Pane fx:id="pane2" layoutX="938.0" layoutY="108.0" prefHeight="102.0" prefWidth="193.0" style="-fx-background-radius: 50;" styleClass="from-box">
+               <children>
+                  <Text fill="#3c3d3f" layoutX="24.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 15;" styleClass="Name" text="All" wrappingWidth="76.99999159574509" />
+                  <Text fill="#3c3d3f" layoutX="24.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 20;" styleClass="Name" text="Order" wrappingWidth="140.9999915957451" />
+                  <Text fx:id="txtEmpCount" fill="#3c3d3f" layoutX="115.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Name" text="32" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+   <stylesheets>
+      <URL value="@../style/dashbord_form.css" />
+      <URL value="@../style/From.css" />
+   </stylesheets>
+</AnchorPane>

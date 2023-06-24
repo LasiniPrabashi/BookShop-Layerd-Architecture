@@ -1,0 +1,43 @@
+.search-field{
+   -fx-border-color: black;
+   -fx-border-radius: 50;
+   -fx-text-fill:#3C3D3F ;
+   -fx-font-weight: bold;
+   -fx-font-size: 15;
+}
+.Name{
+   -fx-text-fill:#3C3D3F ;
+   -fx-font-weight: bold;
+   -fx-font-size: 25;
+}
+.button-add{
+   -fx-text-fill:#ffff ;
+   -fx-font-weight: bold;
+   -fx-font-size: 15;
+   -fx-background-color:#348DD8 ;
+   -fx-background-radius: 20;
+}
+.button-add:hover{
+   -fx-effect: dropshadow( gaussian ,dimgray,40,0.1,0,0);
+}
+.button-update{
+   -fx-text-fill:#ffff ;
+   -fx-font-weight: bold;
+   -fx-font-size: 15;
+   -fx-background-color:#03DE5A ;
+   -fx-background-radius: 20;
+}
+.button-update:hover{
+   -fx-effect: dropshadow( gaussian ,dimgray,20,0.1,0,0);
+}
+.from-box{
+   -fx-background-color: #fff;
+   -fx-background-radius: 50;
+   -fx-effect: dropshadow( gaussian ,dimgray,40,0.1,0,0);
+}
+.tbl{
+   -fx-font-size: 20;
+}
+.tree-col{
+   -fx-background-color: #02ECFF;
+}
